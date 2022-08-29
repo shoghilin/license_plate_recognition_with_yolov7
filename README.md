@@ -29,6 +29,11 @@ cd ..
 python OCR.py
 ```
 
+## Result
+![](./images/Figure_1.png)
+![](./images/Figure_2.png)
+![](./images/Figure_3.png)
+
 ## The resource used in this project as following:
 
 **YOLOv7**
