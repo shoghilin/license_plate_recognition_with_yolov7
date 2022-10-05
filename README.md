@@ -7,6 +7,11 @@ conda create -n ANPR python=3.8
 conda activate ANPR
 pip install -r requirements.txt
 ```
+Install pytorch from [web](https://pytorch.org/get-started/locally/)
+
+## Download car plate dataset
+* Downloaded the [dataset](https://www.kaggle.com/datasets/andrewmvd/car-plate-detection) to the root of this project
+* name the folder "car-plate-detection".
 
 ## Train the YOLOv7 model
 Run the following command to preprocess the dataset and start transfer learning yolov7 to our application.

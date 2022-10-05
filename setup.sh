@@ -39,7 +39,11 @@ fi
 
 #--- YOLOv7 Training ---#
 # finetune p5 models
-wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7_training.pt
+if test -f "yolov7_training.pt"; then
+ echo "pretrained weigt downloaded"
+else
+    wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7_training.pt
+fi
 python train.py --workers 8 --device 0 --batch-size 8 --data data/alpr.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights 'yolov7_training.pt' --name yolov7-license --hyp data/hyp.scratch.custom.yaml
 
 # detect
